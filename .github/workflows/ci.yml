@@ -23,7 +23,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Compile the code
-        run: javac -cp "libs/junit-platform-console-standalone-1.10.2.jar" -d out src/main/java/PasswordGenerator.java src/test/java/PasswordGeneratorTest.java
+        run: javac -cp "libs/junit-jupiter-api-5.8.2.jar:libs/junit-jupiter-engine-5.8.2.jar:libs/junit-platform-launcher-1.8.2.jar" -d out src/main/java/PasswordGenerator.java src/test/java/PasswordGeneratorTest.java
 
       - name: Run tests
-        run: java -cp "out:libs/junit-platform-console-standalone-1.10.2.jar" org.junit.platform.console.ConsoleLauncher --scan-classpath
+        run: java -cp "out:libs/junit-jupiter-api-5.8.2.jar:libs/junit-jupiter-engine-5.8.2.jar:libs/junit-platform-launcher-1.8.2.jar" org.junit.platform.console.ConsoleLauncher --scan-classpath
