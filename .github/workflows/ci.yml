@@ -20,6 +20,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '17'
+          distribution: 'adoptopenjdk'  # Especifica la distribución de Java
 
       - name: Compile the code
         run: javac -d out src/main/java/PasswordGenerator.java src/test/java/PasswordGeneratorTest.java
